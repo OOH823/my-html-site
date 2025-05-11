@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>妈妈的爱</title>
+    <style>
+        body {
+            background: #ffe6f2;
+            text-align: center;
+            font-family: "微软雅黑";
+        }
+        .poem {
+            border: 2px solid #ff69b4;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>致最善良 最开朗 最爱笑 最美丽的妈妈</h1>
+    <img src="小丢丢.jpg" alt="我们的合照">
+	<img src="炫酷的刘海.jpg" alt="我们的合照">
+	<img src="被嘲笑的刘海.jpg" alt="我们的合照">
+	<img src="我爹巧手下的雪孩子.jpg" alt="我们的合照">
+	<img src="清爽动物园.jpg" alt="我们的合照">
+	<img src="天安门奇遇记.jpg" alt="我们的合照">
+    <div class="poem">
+        <p>慈母手中线，游子身上衣。</p>
+        <p>临行密密缝，意恐迟迟归。</p>
+        <p>谁言寸草心，报得三春晖。</p>
+    </div>
+    <audio id="myAudio" loop>
+        <source src="稚始稚终23364 - 暖暖_转换.mp3" type="audio/mp3">
+        您的浏览器不支持音频播放。
+    </audio>
+	
+	<audio id="myAudio" controls loop>
+    <source src="稚始稚终23364 - 暖暖_转换.mp3" type="audio/mpeg">
+    您的浏览器不支持音频播放，请下载后播放。
+</audio>
+<script>
+    // 用户点击页面后初始化音频
+    document.addEventListener('click', function initAudio() {
+        const audio = document.getElementById('myAudio');
+        audio.load(); // 重置音频
+        audio.play().catch(() => {
+            alert("请手动点击播放按钮");
+        });
+    });
+</script>
+    <script>
+        // 页面加载后自动播放（需用户交互后生效）
+        document.addEventListener('click', function() {
+            document.getElementById('myAudio').play();
+        }, { once: true });
+    </script>
+</body>
+</html>
